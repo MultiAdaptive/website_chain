@@ -1,11 +1,11 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/nodes/page": "app/nodes/page.js",
-  "/page": "app/page.js",
   "/validators/page": "app/validators/page.js",
+  "/page": "app/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/blobs/ethereum/page": "app/blobs/ethereum/page.js",
   "/blobs/page": "app/blobs/page.js",
   "/blobs/detail/page": "app/blobs/detail/page.js",
+  "/blobs/ethereum/page": "app/blobs/ethereum/page.js",
   "/blobs/bitcoin/page": "app/blobs/bitcoin/page.js"
 }
