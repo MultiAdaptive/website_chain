@@ -1,0 +1,94 @@
+.cardContainer{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    color: #5e4c3f;
+    border: 1px solid #f8ac41;
+}
+
+.cardContainer::before,
+.cardContainer::after,
+.square::before,
+.square::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #f8ac41;
+    z-index: 99
+}
+
+.blue{
+    border-color: #3e75bc;
+}
+
+.blue::before,
+.blue::after,
+.blue .square::before,
+.blue .square::after {
+    background-color: #3e75bc;
+}
+
+.cardContainer::before{
+    top: 0;
+    left: 0;
+}
+
+.cardContainer::after{
+    top: 0;
+    right: 0;
+}
+
+.square::before{
+    bottom: 0;
+    left: 0;
+}
+
+.square::after{
+    bottom: 0;
+    right: 0;
+}
+
+.square{
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+}
+
+.cardHeader{
+    display: flex;
+    justify-content: center;
+}
+
+.cardIcon{
+    position: absolute;
+    left: 20px;
+}
+
+.cardContent{
+    margin-top: 24px;
+    white-space: wrap;
+    word-break: break-all;
+    color: #3e75bc;
+}
+
+.cardFooter{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .cardContainer{
+        width: 120px;
+        height: 120px;
+    }
+    .cardContainer::after, .cardContainer::before{
+        zoom: .5;
+    }
+    .square{
+        zoom: .5;
+    }
+}

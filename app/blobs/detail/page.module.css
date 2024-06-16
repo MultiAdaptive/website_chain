@@ -1,0 +1,119 @@
+.detail{
+    width: calc(80% - 48px);
+    margin: 0 auto;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.title{
+    color: #3e75bc;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.rowFirst{
+    display: flex;
+    gap: 32px;
+}
+
+.overview{
+    width: 100%;
+    min-width: 300px;
+}
+
+.overviewContent{
+    width: 100%;
+    height: 341px;
+    padding: 16px;
+    margin-top: 16px;
+    border: 1px solid #3e75bc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.commitment{
+    width: 100%;
+    min-width: 300px;
+}
+
+.commitmentContent{
+    width: 100%;
+    height: 341px;
+    padding: 16px;
+    margin-top: 16px;
+    border: 1px solid #3e75bc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.commitmentContentItem{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.commitmentContentItem p{
+    color: #595a5c;
+    white-space: wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.commitmentContentItem p:nth-child(1){
+    margin-bottom: 8px;
+    color: #8f9dbe;
+}
+
+.rowSecond{
+    margin-top: 16px;
+}
+
+.dataContent{
+    width: 100%;
+    min-height: 200px;
+    padding: 16px;
+    margin-top: 16px;
+    border: 1px solid #3e75bc;
+    border-radius: 10px;
+    position: relative;
+}
+
+.validBtn{
+    width: 100px;
+    height: 50px;
+    border-radius: 0 10px 0 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #4682c8;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.validBtn img{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+@media screen and (max-width: 936px) {
+    .detail{
+        zoom: 0.8
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .detail{
+        zoom: 0.5
+    }
+    .rowFirst{
+        flex-direction: column;
+    }
+}

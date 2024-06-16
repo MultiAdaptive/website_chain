@@ -1,0 +1,44 @@
+.blobSortCard{
+    width: 250px;
+    position: relative;
+    border-radius: 8px;
+    border-bottom: 5px solid #4682C8;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.cardHeader{
+    min-height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: #4682C8;
+    color: #fff;
+}
+
+.cardContent{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cardRow{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rowKey{
+    flex-basis: 50%;
+    margin-right: 16px;
+}
+
+.rowValue{
+    flex-basis: 50%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+}

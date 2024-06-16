@@ -1,0 +1,13 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+}
+
+.wrapper p:nth-child(1){
+    flex-basis: 20%;
+    color: #8f9dbe;
+}
+
+.wrapper p:nth-child(2){
+    color: #595a5c;
+}

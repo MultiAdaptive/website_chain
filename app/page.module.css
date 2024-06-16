@@ -1,0 +1,21 @@
+.pageWrapper{
+    width: calc(80%);
+    margin: 0 auto;
+}
+
+.title{
+    font-size: 16px;
+    color: #4682C8;
+}
+
+@media screen and (max-width: 936px) {
+    .cardBox{
+        zoom: 0.8
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cardBox{
+        zoom: 0.5
+    }
+}

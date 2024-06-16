@@ -1,0 +1,23 @@
+.validatorWrapper{
+    width: calc(80% - 48px);
+    margin: 0 auto
+}
+
+.validatorHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.validatorRadios{
+    display: flex;
+    gap: 16px;
+}
+
+.validatorContent{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    margin-top: 48px;
+}
