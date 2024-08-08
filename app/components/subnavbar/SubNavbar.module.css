@@ -1,0 +1,47 @@
+.subnavbar{
+    background-color: hsl(212, 54%, 53%);
+    min-height: 60px;
+    padding: 16px calc(10%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+}
+
+.linkBox{
+    display: flex;
+    gap: 16px;
+    color: #E0E0E0;
+    cursor: pointer;
+}
+
+.link:hover{
+    color: #fff;
+}
+
+.activeLink{
+    font-weight: 800;
+    color: #fff;
+}
+
+ 
+@media screen and (max-width: 480px) {
+    .subnavbar{
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+}
+@media screen and (max-width: 936px) {
+    .subnavbar{
+        gap: 12px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .subnavbar{
+        padding: 16px calc(5%);
+    }
+    
+}

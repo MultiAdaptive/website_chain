@@ -1,0 +1,30 @@
+.page_wrapper{
+    width: calc(80% );
+
+    margin: 0 auto
+}
+
+.list_wrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+}
+@media screen and (max-width: 1400px) {
+    .page_wrapper{
+        width: calc(90%);
+        margin: 0 auto;
+    }
+    
+}
+@media screen and (max-width: 936px) {
+    .list_wrapper{
+        zoom: 0.8
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .list_wrapper{
+        zoom: 0.5
+    }
+}

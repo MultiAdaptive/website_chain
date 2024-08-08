@@ -1,0 +1,34 @@
+.pageWrapper{
+    width: calc(80%);
+    margin: 0 auto;
+}
+
+
+.gap-8{
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    font-size: 16px;
+    color: #4682C8;
+}
+ 
+
+@media screen and (max-width: 1400px) {
+    .pageWrapper{
+        width: calc(90%);
+        margin: 0 auto;
+    }
+    
+}
+@media screen and (max-width: 936px) {
+    /* .cardBox{
+        zoom: 0.8
+    } */
+}
+
+@media screen and (max-width: 768px) {
+    /* .cardBox{
+        zoom: 0.5
+    } */
+}

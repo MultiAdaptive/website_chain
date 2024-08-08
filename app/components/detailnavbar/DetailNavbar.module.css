@@ -1,0 +1,38 @@
+.detail_navbar {
+    background-color: #4682C8;
+    min-height: 80px;
+    padding: 16px calc(10%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+}
+
+
+
+.link_box {
+    display: flex;
+    align-items: center;
+}
+ 
+
+.link_box span {
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .detail_navbar {
+        padding: 16px calc(5%);
+
+    }
+}
+
+@media screen and (max-width: 936px) {
+    .detail_navbar {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+}

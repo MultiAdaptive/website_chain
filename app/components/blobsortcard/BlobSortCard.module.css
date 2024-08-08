@@ -1,0 +1,72 @@
+.blobSortCard{
+    background-color: #fff;
+    font-size: 14px;
+    color: #533E2D;
+    width: 280px;
+    position: relative;
+    border-radius: 8px;
+    border-bottom: 5px solid #4682C8;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.cardHeader{
+    min-height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: #4682C8;
+    color: #fff;
+}
+.rowKey{
+    font-size: 12px;
+    color: #6D7F9C;
+    flex-basis: 35%;
+    margin-right: 10px;
+}
+
+.cardContent{
+    padding: 16px;
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cardRow{
+    display: flex;
+}
+
+
+.rowValue{
+    flex-basis: 70%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+}
+@media screen and (max-width: 1580px) {
+    .blobSortCard{
+        /* transform: scale(0.9)  */
+        width: 240px;
+        
+    }
+}
+    @media screen and (max-width: 1115px) {
+        .blobSortCard{
+            /* transform: scale(0.9)  */
+            width: 230px;
+            
+        }
+        
+}
+@media screen and (max-width: 1040px) {
+    .blobSortCard{
+        /* transform: scale(0.9)  */
+        width: 200px;
+        
+    }
+    
+}

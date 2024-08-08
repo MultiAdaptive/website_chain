@@ -1,0 +1,140 @@
+.blobCard {
+    color: #533E2D;
+    width: 13.5%;
+    height: 240px;
+    position: relative;
+    border-radius: 8px;
+    border-bottom: 5px solid #4682C8;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.noBorder {
+    border: none;
+}
+
+.blobHeader {
+    min-height: 40px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4682C8;
+    color: #fff;
+}
+
+.blobHeader img {
+    position: absolute;
+    left: 10px;
+}
+
+.blobContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #533E2D;
+    background-color: #fff;
+    height: calc(100% - 40px);
+}
+
+/* .blobCard:hover .blobContent{
+    background-color: #E3F2FD;
+} */
+
+.blobContent p {
+    font-size: 14px;
+}
+
+.imgStyle {
+    width: 200px;
+    height: 200px;
+}
+
+.linkWrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(233, 246, 254, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.link {
+    z-index: 11;
+    color: #4682C8;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.1s ease-in-out;
+}
+
+
+.link:hover {
+    font-size: 22px;
+}
+
+.arrow {
+    transform: rotate(45deg);
+    color: #4682C8 !important;
+    font-size: 22px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .blobContent {
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 936px) {
+    .blobCard {
+        width: 220px;
+        height: 240px;
+    }
+
+    .arrow {
+        font-size: 20px;
+    }
+
+    .blobContent {
+        gap: 4px;
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 714px) {
+    .blobCard {
+        width: 170px;
+        height: 240px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 460px) {
+    .blobCard {
+        width: 120px;
+        height: 200px;
+    }
+
+    .link:hover {
+        font-size: 18px;
+    }
+
+    .blobContent p {
+        font-size: 12px;
+    }
+
+}
