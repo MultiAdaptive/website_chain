@@ -20,7 +20,6 @@ export default function BlobsDetail() {
     const router = useRouter();
     const store = useContext(BlobContext)
     const [blobDetail, setBlobDetail] = useState<IBlobDetail>()
-    const [copiedText, setCopiedText] = useState('');
     const [chain, setChain] = useState('');
     const [blobId, setBlobId] = useState('');
     const [hash, setHash] = useState('');
@@ -122,7 +121,6 @@ export default function BlobsDetail() {
     async function handleCopy(textToCopy: string) {
         try {
             await navigator.clipboard.writeText(textToCopy);
-            setCopiedText(textToCopy);
             openNotification()
         } catch (err) {
             console.error('Con‘t copy the text: ', err);
