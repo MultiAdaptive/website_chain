@@ -86,8 +86,8 @@ export default function BlobsDetail() {
     const apiGetBlobDetail = async (params?: { [key: string]: string }) => {
         const res = await axios.get(`/api/blob-detail`, { params });
         if (res.status === 200) {
-        setDescText('Confirmed')
-        setFeeText('Eth')
+            setDescText('Confirmed')
+            setFeeText('Eth')
 
             setStorageState(isTimestampMoreThan14DaysAgo(res.data.Timestamp))
             setBlobDetail(res.data);
@@ -96,8 +96,8 @@ export default function BlobsDetail() {
     const btcGetBlobDetail = async (params?: { [key: string]: string }) => {
         const res = await axios.get(`/api_btc/blob-detail`, { params });
         if (res.status === 200) {
-        setDescText('Confirmed')
-        setFeeText('Sat')
+            setDescText('Confirmed')
+            setFeeText('Sat')
 
             setStorageState(isTimestampMoreThan14DaysAgo(res.data.Timestamp))
             setBlobDetail(res.data);
@@ -127,7 +127,7 @@ export default function BlobsDetail() {
         }
     }
 
- 
+
     useEffect(() => {
         router.refresh();
         getChain(location.href);
@@ -149,7 +149,9 @@ export default function BlobsDetail() {
                     <div className="flex ">
                         <p className="w-1/5 basic_gray">Block:</p>
                         {/* //http://13.228.170.151:3002/block-height/7460 */}
-                        <Link className="w-3/4 basic_blue hover:underline" target="_blank" href={chain == 'eth' ? `https://etherscan.io/block/${blobDetail?.block_num}` : `http://13.228.170.151:3002/block-height/${blobDetail?.block_num}`}  >
+                        {/* //https://sepolia.etherscan.io/   */}
+                        {/* https://etherscan.io/block */}
+                        <Link className="w-3/4 basic_blue hover:underline" target="_blank" href={chain == 'eth' ? `https://sepolia.etherscan.io/block/${blobDetail?.block_num}` : `http://13.228.170.151:3002/block-height/${blobDetail?.block_num}`}  >
                             <p >{blobDetail?.block_num}</p>
                         </Link>
 
@@ -161,26 +163,35 @@ export default function BlobsDetail() {
                     {/* <Keyval label={"Timestamp:"} value={blobDetail?.timestamp+" "+feeText} /> */}
                     <div className="flex ">
                         <p className="w-1/5 basic_gray">Fee:</p>
-                        <p>{blobDetail?.fee} {feeText}</p>
+                        <p className="basic_black">{blobDetail?.fee} {feeText}</p>
                     </div>
 
                     <Keyval label={"Size:"} value={blobDetail?.size} />
-                    <Keyval label={"TxHash:"} value={blobDetail?.tx_hash} />
+                    <div className="flex ">
+                        <p className="w-1/5 basic_gray">TxHash:</p>
+                        {/* //http://13.228.170.151:3002/block-height/7460 */}
+                        {/* //https://sepolia.etherscan.io/   */}
+                        {/* https://etherscan.io/block */}
+                        <Link className="w-3/4 basic_blue hover:underline" target="_blank" href={chain == 'eth' ? `https://sepolia.etherscan.io/tx/${blobDetail?.tx_hash}` : `http://13.228.170.151:3002/block-height/${blobDetail?.block_num}`}  >
+                            <p >{blobDetail?.tx_hash}</p>
+                        </Link>
+
+                        {contextHolder}
+                        {/* <CopyOutlined style={{ fontSize: '12px', color: '#4682C8', }} onClick={() => handleCopy(blobDetail?.block_num + "")} /> */}
+                    </div>
+
+                    {/* <Keyval label={"TxHash:"} value={blobDetail?.tx_hash} /> */}
                     <div className="flex  ">
                         <div className="w-1/5 basic_gray">
                             Validator:
                         </div>
                         <div >
-                            
                             {
-
-    <div className="basic_black">
-      { blobDetail?.validators.map(item => (
-        <div  className="basic_black" key={item}>{item}</div>
-      ))}
-    </div>
-
- 
+                                <div className="basic_black">
+                                    {blobDetail?.validators.map(item => (
+                                        <div className="basic_black" key={item}>{item}</div>
+                                    ))}
+                                </div>
                             }
                         </div>
                     </div>

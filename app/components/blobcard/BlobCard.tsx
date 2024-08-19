@@ -38,7 +38,7 @@ export default function BlobCard(props: { blob?: IBlob | string, chain: string }
             <div className={`hover:bg-slate-50 ${styles.blobContent}`}>
 
                 <p className="basic_blue">CM: {getHash(blob.commitment)}</p>
-                <Link className=" basic_blue hover:underline" target="_blank" href={chain == 'eth' ? `https://etherscan.io/block/${blob?.block_num}` : `http://13.228.170.151:3002/block-height/${blob?.block_num}`} onClick={(e) => {
+                <Link className=" basic_blue hover:underline" target="_blank" href={chain == 'eth' ? `https://sepolia.etherscan.io/block/${blob?.block_num}` : `http://13.228.170.151:3002/block-height/${blob?.block_num}`} onClick={(e) => {
                     e.stopPropagation();
                 }}>
                     <p >{blob.block_num}</p>

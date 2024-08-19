@@ -29,7 +29,7 @@ export default function BlobSortCard({ chain,sortKey, blob, onClickHandle }: {ch
             <Keyval label={"Commitment:"} value={getHash(blob?.commitment_hash + "")} />
             <div className="flex">
                 <p className="w-1/2 basic_gray">Block:</p>
-                <Link className="w-1/2 basic_blue hover:underline" target="_blank" href={chain == 'eth' ? `https://etherscan.io/block/${blob?.block_num}` : `http://13.228.170.151:3002/block-height/${blob?.block_num}`} >
+                <Link className="w-1/2 basic_blue hover:underline" target="_blank" href={chain == 'eth' ? `https://sepolia.etherscan.io/block/${blob?.block_num}` : `http://13.228.170.151:3002/block-height/${blob?.block_num}`} >
                     <p >{blob && blob['block_num']}</p>
                 </Link>
 
